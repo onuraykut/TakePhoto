@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Server">
+        <EditTextPreference
+            android:defaultValue="0.0.0.0"
+            android:key="ip_adress_key"
+            android:summary="in server, folder path"
+            android:digits="0123456789."
+            android:inputType="number"
+            android:title="IP-Adress" />
+
+        <EditTextPreference
+            android:defaultValue="root"
+            android:key="username_key"
+            android:summary="username"
+            android:title="Username" />
+
+        <EditTextPreference
+            android:defaultValue="password"
+            android:key="password_key"
+            android:summary="******"
+            android:inputType="textPassword"
+            android:title="Password" />
+
+        <EditTextPreference
+            android:defaultValue="22"
+            android:key="port_key"
+            android:summary="SSH Port"
+            android:inputType="number"
+            android:title="SSH Port" />
+
+        <EditTextPreference
+            android:defaultValue="/home"
+            android:key="server_path_key"
+            android:summary="Server file path"
+            android:title="Server file path at Linux" />
+
+        <EditTextPreference
+            android:defaultValue="captured_image.jpeg"
+            android:key="image_name_key"
+            android:summary="Image name"
+            android:title="Image Name" />
+
+    </PreferenceCategory>
+<PreferenceCategory android:title="Device">
+    <Preference
+        android:key="device_folder_key"
+        android:summary="Select file folder to save image"
+        android:title="Download Folder" />
+</PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_header_about">
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/summary_about" />
+
+        <Preference
+            android:summary="1.0"
+            android:title="@string/title_version" />
+
+        <Preference
+            android:key="@string/key_send_feedback"
+            android:summary="@string/summary_support"
+            android:title="@string/title_send_feedback" />
+
+        <!-- preference opens url in browser -->
+        <Preference
+            android:summary="@string/summary_faq"
+            android:title="@string/title_faq">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://wwww.google.com" />
+        </Preference>
+
+        <Preference android:title="@string/privacy_policy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.google.com" />
+        </Preference>
+
+        <Preference android:title="@string/title_terms">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.google.com" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
